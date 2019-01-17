@@ -43,6 +43,9 @@ class FilterClassAnnotation extends ClassVisitor {
             String superName, String[] interfaces) {
     	
         mClassName = name;
+        if ((access & (Opcodes.ACC_PUBLIC | Opcodes.ACC_PROTECTED)) == 0) {
+        	setRemoveClass();
+        }
         super.visit(version, access, name, signature, superName, interfaces);
     }
 
