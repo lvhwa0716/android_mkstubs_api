@@ -1,5 +1,6 @@
 # android_mkstubs_api
 export android system jar to application api jar
+copy mkstubs from google
 
 # 1. Build 
 ##	a). platform java library
@@ -29,7 +30,7 @@ export android system jar to application api jar
 		~/AndroidSdk/tools$ android list avd
 			Name: Nexus_5_API_21
 			Name: Nexus_5X_API_26
-		~/AndroidSdk/tools$ ./emulator -avd Nexus_5X_API_26 -writable-system
+		~/AndroidSdk/tools$ ./emulator -avd Nexus_5X_API_26 -writable-systemmkstubs/src/main/java/com/android/mkstubs/FilterClassAnnotation.java
 			Note : MUST NOT "Google APIs" image
 				OR will be denied with following message:
 					adbd cannot run as root in production builds
