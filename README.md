@@ -1,6 +1,6 @@
 # android_mkstubs_api
-export android system jar to application api jar
-copy mkstubs from google
+	export android system jar to application api jar
+	copy mkstubs from google
 
 # 1. Build 
 ##	a). platform java library
