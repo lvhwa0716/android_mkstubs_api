@@ -95,15 +95,20 @@ class FilterClassAnnotation extends ClassVisitor {
 
     @Override
     public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-
+    	if(isRemoved)
+    		return null;
         // TODO produce an error if a filtered annotation type is being used
     	if(!mFilter.acceptAnnotation(desc.substring(1,desc.length() - 1))) { 
-    		mFilter.getExcludeFull().add(mClassName);
-    		mFilter.getExcludePrefix().add(mClassName+"$");
-    		isRemoved = true;
+    		setRemoveClass();
     	}
         return super.visitAnnotation(desc, visible);
     }
 
-    
+    private void setRemoveClass() {
+    	if( !isRemoved) {
+    		mFilter.getExcludeFull().add(mClassName);
+    		mFilter.getExcludePrefix().add(mClassName+"$");
+    		isRemoved = true;
+    	}
+    }
 }
