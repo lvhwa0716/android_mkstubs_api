@@ -1,8 +1,8 @@
 *.iml
 .gradle
-local.properties
+/local.properties
 .settings
 .DS_Store
-build
-bin
+/build
+/bin
 
