@@ -12,9 +12,13 @@ import win.i029.annotation.ExportHide;
 public class FirstClass {
 
     public final static String TAG = "FirstClass";
-    public final String TAG1 = "FirstClass_1";
+    public final static String TAG3; // This just export variable name without values
+	public final String TAG1 = "FirstClass_1"; // export variable name and values, modify platform, can't change APP
 	@ExportHide()
     public final String TAG2 = "FirstClass_2";
+	static {
+		TAG3 = "HAS VALUE";
+	}
     public FirstClass(Context context) {
         Log.d(TAG, context.getPackageName());
     }

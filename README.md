@@ -30,7 +30,7 @@
 		~/AndroidSdk/tools$ android list avd
 			Name: Nexus_5_API_21
 			Name: Nexus_5X_API_26
-		~/AndroidSdk/tools$ ./emulator -avd Nexus_5X_API_26 -writable-systemmkstubs/src/main/java/com/android/mkstubs/FilterClassAnnotation.java
+		~/AndroidSdk/tools$ ./emulator -avd Nexus_5X_API_26 -writable-system
 			Note : MUST NOT "Google APIs" image
 				OR will be denied with following message:
 					adbd cannot run as root in production builds
